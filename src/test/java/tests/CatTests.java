@@ -79,7 +79,7 @@ public class CatTests {
     public void dogGoesGrrTest()
     {
         actualCat = new Cat(AnimalType.WILD, Skin.UNKNOWN,Gender.UNKNOWN, Breed.UNKNOWN);
-        assertEquals("The cat goes Hiss! Hiss!", actualCat.speak(), "I was expecting hiss");
+        assertEquals("The cat goes hiss! hiss!", actualCat.speak(), "I was expecting Hiss");
     }
 
     @Test

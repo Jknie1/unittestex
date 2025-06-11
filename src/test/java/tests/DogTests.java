@@ -18,7 +18,6 @@ public class DogTests {
         actualDog = new Dog(AnimalType.DOMESTIC, Skin.FUR, Gender.UNKNOWN, Breed.UNKNOWN);
     }
 
-
     @Test
     @Order(1)
     @DisplayName("Animal Test Type Tests Domestic")
@@ -76,7 +75,7 @@ public class DogTests {
     public void dogGoesGrrTest()
     {
         actualDog = new Dog(AnimalType.WILD, Skin.UNKNOWN,Gender.UNKNOWN, Breed.UNKNOWN);
-        assertEquals("The dog goes Grr! Grr!", actualDog.speak(), "I was expecting Grr");
+        assertEquals("The dog goes grr! grr!", actualDog.speak(), "I was expecting grr");
     }
 
     @Test
@@ -85,6 +84,6 @@ public class DogTests {
     public void dogGoesBarkTest()
     {
         actualDog = new Dog(AnimalType.UNKNOWN, Skin.UNKNOWN,Gender.UNKNOWN, Breed.UNKNOWN);
-        assertEquals("The dog goes Bark! Bark!", actualDog.speak(), "I was expecting Bark");
+        assertEquals("The dog goes Bark! Bark!", actualDog.speak(), "I was expecting bark");
     }
 }

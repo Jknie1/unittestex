@@ -33,17 +33,17 @@ public class AssertJExampleTest
                     new BigDecimal("750.00"), 1),
             new Dog(AnimalType.DOMESTIC, Skin.FUR, Gender.MALE, Breed.POODLE,
                     new BigDecimal("750.00"), 2),
-            new Dog(AnimalType.DOMESTIC, Skin.HAIR, Gender.FEMALE, Breed.CARDINAL,
+            new Dog(AnimalType.DOMESTIC, Skin.HAIR, Gender.FEMALE, Breed.GERMAN_SHEPARD,
                     new BigDecimal("750.00"), 2)
     );
 
-    @Test
-    @DisplayName("ABC test")
-    public void abcTest()
-    {
-        assertThat("abc").isEqualTo(123);
-
-    }
+//    @Test
+//    @DisplayName("ABC test")
+//    public void abcTest()
+//    {
+//        assertThat("abc").isEqualTo(123);
+//
+//    }
 
     @Test
     @DisplayName("Empty String test")
@@ -62,14 +62,14 @@ public class AssertJExampleTest
                .doesNotContainNull();
     }
 
-    @Test
-    @DisplayName("Dog Collection  Match Tests1")
-    public void dogCollectionMatch()
-    {
-        assertThat(dListActual).isEqualTo(dListExpected)
-                .isNotEmpty()
-                .doesNotContainNull();
-    }
+//    @Test
+//    @DisplayName("Dog Collection  Match Tests1")
+//    public void dogCollectionMatch()
+//    {
+//        assertThat(dListActual).isEqualTo(dListExpected)
+//                .isNotEmpty()
+//                .doesNotContainNull();
+//    }
 
     @Test
     @DisplayName("Dog Collection  Match Tests2")

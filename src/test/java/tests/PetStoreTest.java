@@ -1,6 +1,7 @@
 package tests;
 
 import animals.AnimalType;
+import animals.petstore.pet.Pet;
 import animals.petstore.pet.attributes.Breed;
 import animals.petstore.pet.attributes.Gender;
 import animals.petstore.pet.attributes.Skin;
@@ -20,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.DynamicContainer.dynamicContainer;
 import static org.junit.jupiter.api.DynamicTest.dynamicTest;
@@ -33,6 +35,35 @@ public class PetStoreTest
     {
         petStore = new PetStore();
         petStore.init();
+    }
+
+    @Test
+    @DisplayName("Init Add Duplicate Test")
+    public  void initAddDuplicateTest()
+    {
+        // Arrange
+        PetStore store = new PetStore();
+        Pet duplicateDog = new Dog(
+                AnimalType.DOMESTIC,
+                Skin.FUR,
+                Gender.MALE,
+                Breed.MALTESE,
+                new BigDecimal("750.00"),
+                3
+        );
+
+        // Act
+        store.initAddDuplicateItem(duplicateDog);
+
+        // Assert
+        long count = store.getPetsForSale().stream()
+                .filter(p -> p instanceof Dog &&
+                        ((Dog) p).getBreed() == Breed.MALTESE &&
+                        p.getCost().compareTo(new BigDecimal("750.00")) == 0)
+                .count();
+
+        // Make sure the duplicate dog was added (should be 2 now)
+        assertEquals(2, count);
     }
 
     @Test
