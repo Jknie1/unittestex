@@ -61,7 +61,7 @@ public class CatTests {
     public void genderTestFeMale()
     {
         actualCat = new Cat(AnimalType.WILD, Skin.UNKNOWN,Gender.FEMALE, Breed.UNKNOWN);
-        assertEquals(Gender.FEMALE, actualCat.getGender(), "Expecting Male Gender!");
+        assertEquals(Gender.FEMALE, actualCat.getGender(), "Expecting Female Gender!");
     }
 
     @Test
@@ -70,7 +70,7 @@ public class CatTests {
     public void genderCatBreed()
     {
         actualCat = new Cat(AnimalType.WILD, Skin.UNKNOWN,Gender.FEMALE, Breed.BURMESE);
-        assertEquals(Breed.BURMESE, actualCat.getBreed(), "Expecting Breed Maltese!");
+        assertEquals(Breed.BURMESE, actualCat.getBreed(), "Expecting Burmese Maltese!");
     }
 
     @Test
